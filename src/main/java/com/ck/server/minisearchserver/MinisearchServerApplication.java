@@ -11,13 +11,10 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.util.Assert;
 
 @SpringBootApplication
-@MiniSearchServer
-@Configuration
-@Import(DefaultMiniSearchSpringConfig.class)
 public class MinisearchServerApplication {
 
 
-    public MinisearchServerApplication(RedisTemplate<String, String> redisTemplate, DefaultMiniSearchSpringConfig defaultMiniSearchSpringConfig
+    public MinisearchServerApplication(RedisTemplate<String, String> redisTemplate
                                        ) {
         assert redisTemplate != null;
     }
